@@ -1,0 +1,19 @@
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+# @Time : 2026/1/7 20:39
+# @Author : Administrator
+# @File : 2.字符串提示拼接.py
+# @Project : llmops-api
+# @Software: PyCharm
+"""
+
+"""
+from langchain_core.prompts import PromptTemplate
+
+prompt = (
+        PromptTemplate.from_template("请讲一个关于{subject}的冷笑话")
+        + ",让我开心下" +
+        "\n使用{language}语言"
+)
+
+print(prompt.invoke({"subject": "Python", "language": "中文"}).to_string())
