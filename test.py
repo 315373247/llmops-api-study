@@ -2,7 +2,7 @@ import os
 
 from openai import OpenAI
 
-query = "你好，你是"
+query = "你好，你是?"
 client = OpenAI(
     base_url=os.getenv("OPENAI_API_BASE"),
 )
